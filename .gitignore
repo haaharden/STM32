@@ -1,0 +1,49 @@
+# Keil project files
+*.uvguix.*
+*.uvoptx
+*.uvprojx.bak
+
+# Keil build folders
+Objects/
+Output/
+Listing/
+Listings/
+
+# Build output
+*.o
+*.d
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+
+# Temporary files
+*.bak
+*.tmp
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc material folders
+ziliao/
+
+# GUI source cache: keep only custom and generated
+Middleware/lvgl/GUI_APP/gui/**
+!Middleware/lvgl/GUI_APP/gui/
+!Middleware/lvgl/GUI_APP/gui/test/
+!Middleware/lvgl/GUI_APP/gui/test/custom/
+!Middleware/lvgl/GUI_APP/gui/test/custom/**
+!Middleware/lvgl/GUI_APP/gui/test/generated/
+!Middleware/lvgl/GUI_APP/gui/test/generated/**
+
+# Ignore generated makefiles inside kept GUI folders
+Middleware/lvgl/GUI_APP/gui/test/custom/**/*.mk
+Middleware/lvgl/GUI_APP/gui/test/generated/**/*.mk
