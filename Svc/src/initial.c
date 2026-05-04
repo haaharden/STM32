@@ -4,8 +4,13 @@
 #include "freertos.h"
 #include "fatfs.h"
 #include "usb_device.h"
+#include "lv_port_disp.h"
+#include "lv_port_indev.h"
+#include "lv_port_fs.h"
+#include "lvgl.h"
 
 #include "initial.h"
+#include "bsp_sdram.h"
 #include "w25q256.h"
 
 #define debug 0
@@ -69,8 +74,35 @@ void test(void)
   FatFs_BasicTest();
 }
 
-
 #endif
+
+static void FileSystem_Init(void)
+{
+    FRESULT fr;
+    static uint8_t work[4096];
+
+    MX_FATFS_Init();
+
+    fr = f_mount(&USERFatFS, USERPath, 1);
+    if (fr == FR_NO_FILESYSTEM) {
+        fr = f_mkfs(USERPath, FM_ANY | FM_SFD, 0, work, sizeof(work));
+        if (fr != FR_OK) {
+            return;
+        }
+
+        fr = f_mount(&USERFatFS, USERPath, 1);
+        if (fr != FR_OK) {
+            return;
+        }
+    } else if (fr != FR_OK) {
+        return;
+    }
+
+    f_mkdir("0:/image");
+    f_mkdir("0:/note");
+    f_mkdir("0:/font");
+    f_mkdir("0:/ota");
+}
 
 void initial(void)
 {
@@ -78,12 +110,12 @@ void initial(void)
   test();
   #endif
 
-  #if debug == 0
-  static uint8_t work[4096];
-  f_mkfs(USERPath, FM_ANY | FM_SFD, 0, work, sizeof(work));
-  #endif
-
+  BSP_SDRAM_Init();
   W25Q256_Init();
+  FileSystem_Init();
   MX_USB_DEVICE_Init();
-
+  lv_init();
+  lv_port_disp_init();
+  lv_port_indev_init();
+  lv_port_fs_init();
 }

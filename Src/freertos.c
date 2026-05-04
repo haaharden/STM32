@@ -28,6 +28,10 @@
 /* USER CODE BEGIN Includes */
 #include <string.h>
 #include "initial.h"
+#include "lvgl.h"
+#include "gui_test_app.h"
+#include "custom.h"
+#include "events_init.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,6 +51,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
+osSemaphoreId_t LvglReadySemHandle;
 
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
@@ -62,7 +67,13 @@ const osThreadAttr_t defaultTask_attributes = {
 osThreadId_t Initial_TaskHandle;
 const osThreadAttr_t Initial_Task_attributes = {
   .name = "Initial_Task",
-  .stack_size = 256 * 4,
+  .stack_size = 1024 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
+osThreadId_t Display_TaskHandle;
+const osThreadAttr_t Display_Task_attributes = {
+  .name = "Display_Task",
+  .stack_size = 4096 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE END FunctionPrototypes */
@@ -70,6 +81,7 @@ const osThreadAttr_t Initial_Task_attributes = {
 void StartDefaultTask(void *argument);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 void Initial_Task(void *argument);
+void Display_Task(void *argument);
 
 /**
   * @brief  FreeRTOS initialization
@@ -87,6 +99,7 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
+  LvglReadySemHandle = osSemaphoreNew(1, 0, NULL);
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
@@ -104,6 +117,7 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   Initial_TaskHandle = osThreadNew(Initial_Task, NULL, &Initial_Task_attributes);
+  Display_TaskHandle = osThreadNew(Display_Task, NULL, &Display_Task_attributes);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -137,10 +151,27 @@ void StartDefaultTask(void *argument)
 void Initial_Task(void *argument)
 {
   initial();
-	for(;;)
-	{
-	
-	}
+  // initial() 完成前，Display_Task 不能碰任何 LVGL API，否则会在 setup_ui 里踩到未完成初始化的内存系统。
+  osSemaphoreRelease(LvglReadySemHandle);
+  Initial_TaskHandle = NULL;//严谨一点，把句柄删除了，防止误用
+  osThreadExit();
+}
+void Display_Task(void *argument)
+{
+  osSemaphoreAcquire(LvglReadySemHandle, osWaitForever);// 等待 LVGL 初始化完成的信号。
+  LvglReadySemHandle = NULL; // 严谨一点，把句柄删除了，防止误用。
+  osSemaphoreDelete(LvglReadySemHandle);// 同样严谨一点，删除信号量，避免误用。
+
+  // 只在 LVGL 初始化完成后创建界面对象，避免与 initial() 并发访问 LVGL 内部内存池。
+  setup_ui(&guider_ui);
+  events_init(&guider_ui);
+  //custom_init(&guider_ui);
+  for(;;)
+  {
+    // 这里放显示相关的周期性任务，比如 LVGL 的 lv_timer_handler 调度。
+    lv_timer_handler();
+    osDelay(10);  // LVGL 官方推荐 5~10ms 的调度周期。
+  }
 }
 /* USER CODE END Application */
 
