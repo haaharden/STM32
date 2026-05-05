@@ -12,6 +12,7 @@
 #include "initial.h"
 #include "bsp_sdram.h"
 #include "w25q256.h"
+#include "log.h"
 
 #define debug 0
 
@@ -98,9 +99,9 @@ static void FileSystem_Init(void)
         return;
     }
 
-    f_mkdir("0:/image");
+    //f_mkdir("0:/image");
+    //f_mkdir("0:/font");
     f_mkdir("0:/note");
-    f_mkdir("0:/font");
     f_mkdir("0:/ota");
 }
 
@@ -110,6 +111,10 @@ void initial(void)
   test();
   #endif
 
+  lv_fs_file_t file;
+  lv_img_header_t header;
+  volatile lv_fs_res_t fs_res = LV_FS_RES_UNKNOWN; // LVGL 的文件系统 API 返回值，断点时先看它是不是 LV_FS_RES_OK。
+  volatile lv_res_t res = LV_RES_INV; // LVGL 的返回值，断点时先看它是不是 LV_RES_OK。
   BSP_SDRAM_Init();
   W25Q256_Init();
   FileSystem_Init();
@@ -118,4 +123,16 @@ void initial(void)
   lv_port_disp_init();
   lv_port_indev_init();
   lv_port_fs_init();
+	
+  LOGI("test start");
+  fs_res = lv_fs_open(&file, "F:/chaiqvan.bin", LV_FS_MODE_RD);
+  if(fs_res == LV_FS_RES_OK) {
+    lv_fs_close(&file);
+    LOGI("File opened successfully.");
+  }
+  res = lv_img_decoder_get_info("F:/chaiqvan.bin", &header);
+  if(res == LV_RES_OK) {
+    LOGI("Image info retrieved successfully: width=%d, height=%d, color_format=%d", header.w, header.h, header.cf);
+  }
+  osDelay(1); // 在这里打断点，直接观察本函数里的局部变量即可。
 }

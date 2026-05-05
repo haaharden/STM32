@@ -23,8 +23,8 @@ void lv_port_fs_init(void)
 
     lv_fs_drv_init(&fs_drv);
 
-    // 把 FatFs 的 0: 盘映射成 LVGL 的 S: 盘，界面代码里后面就可以直接访问 S:/xxx。
-    fs_drv.letter = 'S';
+    // 把 FatFs 的 0: 盘映射成 LVGL 的 F: 盘，界面代码里后面就可以直接访问 F:/xxx。
+    fs_drv.letter = 'F';
     fs_drv.ready_cb = fs_ready;
     fs_drv.open_cb = fs_open;
     fs_drv.close_cb = fs_close;

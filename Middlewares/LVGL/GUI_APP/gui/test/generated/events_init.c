@@ -22,7 +22,7 @@ static void screen_home_btn_1_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_CLICKED:
     {
-        ui_load_scr_animation(&guider_ui, &guider_ui.screen_1, guider_ui.screen_1_del, &guider_ui.screen_home_del, setup_scr_screen_1, LV_SCR_LOAD_ANIM_NONE, 200, 200, true, true);
+        ui_load_scr_animation(&guider_ui, &guider_ui.screen_1, guider_ui.screen_1_del, &guider_ui.screen_home_del, setup_scr_screen_1, LV_SCR_LOAD_ANIM_NONE, 200, 0, true, true);
         break;
     }
     default:
@@ -41,7 +41,7 @@ static void screen_1_btn_1_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_CLICKED:
     {
-        ui_load_scr_animation(&guider_ui, &guider_ui.screen_home, guider_ui.screen_home_del, &guider_ui.screen_1_del, setup_scr_screen_home, LV_SCR_LOAD_ANIM_NONE, 200, 200, true, true);
+        ui_load_scr_animation(&guider_ui, &guider_ui.screen_home, guider_ui.screen_home_del, &guider_ui.screen_1_del, setup_scr_screen_home, LV_SCR_LOAD_ANIM_NONE, 200, 0, true, true);
         break;
     }
     default:

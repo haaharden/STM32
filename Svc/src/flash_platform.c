@@ -174,6 +174,7 @@ static uint32_t FlashPlatform_AlignEraseAddress(uint32_t address)
   return address - (address % FLASH_PLATFORM_ERASE_SIZE);  // 任何写入都要先回到所属的 4KB 擦除单元起点。
 }
 
+// 检查扇区范围是否合法，主要是为了避免越界访问底层接口时把相邻数据写坏。
 static DRESULT FlashPlatform_CheckRange(DWORD sector, UINT count)
 {
   uint32_t sector_count = (uint32_t)sector;
@@ -207,6 +208,7 @@ static DRESULT FlashPlatform_ResultFromW25Q(uint8_t result)
   }
 }
 
+// 确保设备就绪，首次访问时会触发底层初始化，后续访问时会做轻量状态探测。
 static DRESULT FlashPlatform_EnsureReady(void)
 {
   if ((g_flash_platform_status & STA_NOINIT) != 0U) {  // 首次进入读写/同步时再懒初始化，方便上层在任意时机调用。
@@ -218,6 +220,7 @@ static DRESULT FlashPlatform_EnsureReady(void)
   return RES_OK;
 }
 
+// 读改写一个擦除单元，适用于跨扇区但不跨擦除单元的写入场景，能避免把相邻数据写坏。
 static DRESULT FlashPlatform_WriteEraseUnit(uint32_t erase_address, uint32_t offset, const uint8_t *buffer, uint32_t length)
 {
   DRESULT result = RES_OK;
