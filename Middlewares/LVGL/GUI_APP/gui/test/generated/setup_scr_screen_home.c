@@ -28,6 +28,25 @@ void setup_scr_screen_home(lv_ui *ui)
     lv_obj_set_style_bg_color(ui->screen_home, lv_color_hex(0x2F35DA), LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_grad_dir(ui->screen_home, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+    //Write codes screen_home_img_1
+    ui->screen_home_img_1 = lv_img_create(ui->screen_home);
+    lv_obj_add_flag(ui->screen_home_img_1, LV_OBJ_FLAG_CLICKABLE);
+#if LV_USE_GUIDER_SIMULATOR
+    lv_img_set_src(ui->screen_home_img_1, "C:\\C\\STM32\\Middlewares\\LVGL\\GUI_APP\\gui\\test\\import\\image\\xiangtai.png");
+#else
+    lv_img_set_src(ui->screen_home_img_1, "F:/xiangtai.bin");
+#endif
+    lv_img_set_pivot(ui->screen_home_img_1, 50,50);
+    lv_img_set_angle(ui->screen_home_img_1, 0);
+    lv_obj_set_pos(ui->screen_home_img_1, 0, 0);
+    lv_obj_set_size(ui->screen_home_img_1, 800, 480);
+
+    //Write style for screen_home_img_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_img_recolor_opa(ui->screen_home_img_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_img_opa(ui->screen_home_img_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->screen_home_img_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_clip_corner(ui->screen_home_img_1, true, LV_PART_MAIN|LV_STATE_DEFAULT);
+
     //Write codes screen_home_btn_1
     ui->screen_home_btn_1 = lv_btn_create(ui->screen_home);
     lv_obj_add_flag(ui->screen_home_btn_1, LV_OBJ_FLAG_CHECKABLE);
@@ -37,7 +56,7 @@ void setup_scr_screen_home(lv_ui *ui)
     lv_obj_align(ui->screen_home_btn_1_label, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_style_pad_all(ui->screen_home_btn_1, 0, LV_STATE_DEFAULT);
     lv_obj_set_width(ui->screen_home_btn_1_label, LV_PCT(100));
-    lv_obj_set_pos(ui->screen_home_btn_1, 351, 211);
+    lv_obj_set_pos(ui->screen_home_btn_1, 34, 27);
     lv_obj_set_size(ui->screen_home_btn_1, 100, 60);
 
     //Write style for screen_home_btn_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.

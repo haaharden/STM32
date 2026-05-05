@@ -58,7 +58,7 @@ osSemaphoreId_t LvglReadySemHandle;
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .stack_size = 128 * 4,
+  .stack_size = 1024 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 
@@ -73,7 +73,7 @@ const osThreadAttr_t Initial_Task_attributes = {
 osThreadId_t Display_TaskHandle;
 const osThreadAttr_t Display_Task_attributes = {
   .name = "Display_Task",
-  .stack_size = 4096 * 4,
+  .stack_size = 8192 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE END FunctionPrototypes */
@@ -140,6 +140,7 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+    mount_usb_host();
     HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
     osDelay(1000);
   }

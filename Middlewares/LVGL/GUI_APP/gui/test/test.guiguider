@@ -297,8 +297,8 @@
 					"name": "btn_1",
 					"id": "9phem77x",
 					"type": "btn",
-					"left": 351,
-					"top": 211,
+					"left": 34,
+					"top": 27,
 					"visible": true,
 					"isLock": false,
 					"flag": [],
@@ -498,7 +498,40 @@
 								]
 							}
 						}
-					}
+					},
+					"dropToGap": false
+				},
+				{
+					"name": "img_1",
+					"id": "44oljd6l",
+					"type": "img",
+					"left": 0,
+					"top": 0,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 800,
+					"height": 480,
+					"default_style": false,
+					"use_fs": true,
+					"fs_type": "flash",
+					"sd_path": "",
+					"img_path": "import\\image\\xiangtai.png",
+					"rotate": 0,
+					"x": 50,
+					"y": 50,
+					"color_format": "true-color-alpha",
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"radius": 0
+						}
+					]
 				}
 			],
 			"event": {
@@ -579,8 +612,8 @@
 					"name": "btn_1",
 					"id": "z9bht7jk",
 					"type": "btn",
-					"left": 350,
-					"top": 215,
+					"left": 348,
+					"top": 407,
 					"visible": true,
 					"isLock": false,
 					"flag": [],
@@ -901,14 +934,49 @@
 				],
 				"widgets": [
 					{
+						"name": "screen_home_img_1",
+						"id": "44oljd6l",
+						"type": "img",
+						"visible": true,
+						"flag": [],
+						"pos": [
+							0,
+							0
+						],
+						"size": [
+							800,
+							480
+						],
+						"default_style": false,
+						"img_path": "import\\image\\xiangtai.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "50,50",
+						"use_fs": true,
+						"fs_type": "flash",
+						"img_flash_path": "F:/xiangtai.png",
+						"img_sd_path": "S:/xiangtai.png",
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"radius": 0
+							}
+						]
+					},
+					{
 						"name": "screen_home_btn_1",
 						"id": "9phem77x",
 						"type": "btn",
 						"visible": true,
 						"flag": [],
 						"pos": [
-							351,
-							211
+							34,
+							27
 						],
 						"size": [
 							100,
@@ -989,8 +1057,8 @@
 														"name": "btn_1",
 														"id": "z9bht7jk",
 														"type": "btn",
-														"left": 350,
-														"top": 215,
+														"left": 348,
+														"top": 407,
 														"visible": true,
 														"isLock": false,
 														"flag": [],
@@ -1510,8 +1578,8 @@
 						"visible": true,
 						"flag": [],
 						"pos": [
-							350,
-							215
+							348,
+							407
 						],
 						"size": [
 							100,
@@ -1559,8 +1627,8 @@
 														"name": "btn_1",
 														"id": "9phem77x",
 														"type": "btn",
-														"left": 351,
-														"top": 211,
+														"left": 34,
+														"top": 27,
 														"visible": true,
 														"isLock": false,
 														"flag": [],
@@ -1760,7 +1828,40 @@
 																	]
 																}
 															}
-														}
+														},
+														"dropToGap": false
+													},
+													{
+														"name": "img_1",
+														"id": "44oljd6l",
+														"type": "img",
+														"left": 0,
+														"top": 0,
+														"visible": true,
+														"isLock": false,
+														"flag": [],
+														"width": 800,
+														"height": 480,
+														"default_style": false,
+														"use_fs": true,
+														"fs_type": "flash",
+														"sd_path": "",
+														"img_path": "import\\image\\xiangtai.png",
+														"rotate": 0,
+														"x": 50,
+														"y": 50,
+														"color_format": "true-color-alpha",
+														"style": [
+															{
+																"part": "LV_PART_MAIN",
+																"state": "LV_STATE_DEFAULT",
+																"disable": false,
+																"image_recolor": "#ffffff",
+																"image_recolor_opa": 0,
+																"image_opa": 255,
+																"radius": 0
+															}
+														]
 													}
 												],
 												"event": {

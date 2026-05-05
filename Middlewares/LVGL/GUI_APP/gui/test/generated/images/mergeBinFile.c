@@ -11,10 +11,11 @@
 
 #if LV_USE_FS_RAWFS
 
-const rawfs_size_t rawfs_file_count = 2;
-rawfs_file_t rawfs_files[2] = {
-	0x0, 0, 1152004, "/xiaomi.bin",
-	0x119404, 0, 30004, "/chaiqvan.bin",
+const rawfs_size_t rawfs_file_count = 3;
+rawfs_file_t rawfs_files[3] = {
+	0x0, 0, 1152004, "/xiangtai.bin",
+	0x119404, 0, 1152004, "/xiaomi.bin",
+	0x232808, 0, 30004, "/chaiqvan.bin",
 
 };
 

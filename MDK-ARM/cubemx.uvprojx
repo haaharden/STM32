@@ -81,7 +81,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
-            <RunUserProg2>1</RunUserProg2>
+            <RunUserProg2>0</RunUserProg2>
             <UserProg1Name></UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_PWR_LDO_SUPPLY,USE_HAL_DRIVER,STM32H743xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Bsp/inc;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/RTOS2/Include;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc;../Svc/inc;../Middlewares/LVGL/GUI;../Middlewares/LVGL/GUI/src;../Middlewares/LVGL/GUI/porting;../Middlewares/LVGL/GUI_APP/gui/test/custom;../Middlewares/LVGL/GUI_APP/gui/test/generated;..\Middlewares\RTT</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Bsp/inc;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/RTOS2/Include;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc;../Svc/inc;../Middlewares/LVGL/GUI;../Middlewares/LVGL/GUI/src;../Middlewares/LVGL/GUI/porting;../Middlewares/LVGL/GUI_APP/gui/test/custom;../Middlewares/LVGL/GUI_APP/gui/test/generated;..\Middlewares\RTT;..\Middlewares\ST\STM32_USB_Host_Library\Class\MSC\Inc;..\Middlewares\ST\STM32_USB_Host_Library\Core\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -846,6 +846,21 @@
               <FileType>1</FileType>
               <FilePath>../Src/stm32h7xx_hal_timebase_tim.c</FilePath>
             </File>
+            <File>
+              <FileName>usb_host.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\usb_host.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_conf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\usbh_conf.c</FilePath>
+            </File>
+            <File>
+              <FileName>userh_diskio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\userh_diskio.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1025,6 +1040,11 @@
               <FileName>stm32h7xx_hal_uart_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32h7xx_hal_hcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_hcd.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2565,6 +2585,46 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/USB_Host_library</GroupName>
+          <Files>
+            <File>
+              <FileName>usbh_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_ctlreq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ctlreq.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_ioreq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ioreq.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_pipes.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_pipes.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\ST\STM32_USB_Host_Library\Class\MSC\Src\usbh_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_msc_bot.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\ST\STM32_USB_Host_Library\Class\MSC\Src\usbh_msc_bot.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_msc_scsi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\ST\STM32_USB_Host_Library\Class\MSC\Src\usbh_msc_scsi.c</FilePath>
             </File>
           </Files>
         </Group>

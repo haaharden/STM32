@@ -23,6 +23,11 @@ char USERPath[4];   /* USER logical drive path */
 FATFS USERFatFS;    /* File system object for USER logical drive */
 FIL USERFile;       /* File object for USER */
 
+uint8_t retUSERH;    /* Return value for USERH */
+char USERHPath[4];   //给host的
+FATFS USERHFatFS;    /* File system object for USERH logical drive */
+FIL USERHFile;
+
 /* USER CODE BEGIN Variables */
 
 /* USER CODE END Variables */
@@ -31,7 +36,7 @@ void MX_FATFS_Init(void)
 {
   /*## FatFS: Link the USER driver ###########################*/
   retUSER = FATFS_LinkDriver(&USER_Driver, USERPath);
-
+  retUSERH = FATFS_LinkDriver(&USERH_Driver, USERHPath);
   /* USER CODE BEGIN Init */
   /* additional user code for init */
   /* USER CODE END Init */
