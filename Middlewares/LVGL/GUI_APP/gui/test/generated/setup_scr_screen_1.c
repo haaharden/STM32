@@ -32,7 +32,7 @@ void setup_scr_screen_1(lv_ui *ui)
     ui->screen_1_img_2 = lv_img_create(ui->screen_1);
     lv_obj_add_flag(ui->screen_1_img_2, LV_OBJ_FLAG_CLICKABLE);
 #if LV_USE_GUIDER_SIMULATOR
-    lv_img_set_src(ui->screen_1_img_2, "C:\\C\\STM32\\Middlewares\\LVGL\\GUI_APP\\gui\\test\\import\\image\\xiaomi.png");
+    lv_img_set_src(ui->screen_1_img_2, "C:\\C\\H743\\04_Software\\01_Source_Code\\Middlewares\\LVGL\\GUI_APP\\gui\\test\\import\\image\\xiaomi.png");
 #else
     lv_img_set_src(ui->screen_1_img_2, "F:/xiaomi.bin");
 #endif
@@ -79,7 +79,7 @@ void setup_scr_screen_1(lv_ui *ui)
     ui->screen_1_img_1 = lv_img_create(ui->screen_1);
     lv_obj_add_flag(ui->screen_1_img_1, LV_OBJ_FLAG_CLICKABLE);
 #if LV_USE_GUIDER_SIMULATOR
-    lv_img_set_src(ui->screen_1_img_1, "C:\\C\\STM32\\Middlewares\\LVGL\\GUI_APP\\gui\\test\\import\\image\\chaiqvan.png");
+    lv_img_set_src(ui->screen_1_img_1, "C:\\C\\H743\\04_Software\\01_Source_Code\\Middlewares\\LVGL\\GUI_APP\\gui\\test\\import\\image\\chaiqvan.png");
 #else
     lv_img_set_src(ui->screen_1_img_1, "F:/chaiqvan.bin");
 #endif

@@ -52,7 +52,7 @@
     #define LV_MEM_SIZE (200U * 1024U)         /*[bytes]*/
 
     /*Set an address for the memory pool instead of allocating it as a normal array. Can be in external SRAM too.*/
-    #define LV_MEM_ADR  0xD0177000UL    //0x30000000     /* 直接放到两块 framebuffer 之后的 SDRAM 区域 */
+    #define LV_MEM_ADR   0x30000000    //0xD0177000UL    /* 直接放到两块 framebuffer 之后的 SDRAM 区域 */
     /*Instead of an address give a memory allocator that will be called to get a memory pool for LVGL. E.g. my_malloc*/
     #if LV_MEM_ADR == 0
         #undef LV_MEM_POOL_INCLUDE
@@ -638,7 +638,7 @@
 #endif
 
 /*API for FATFS (needs to be added separately). Uses f_open, f_read, etc*/
-#define LV_USE_FS_FATFS 1
+#define LV_USE_FS_FATFS 0
 #if LV_USE_FS_FATFS
     #define LV_FS_FATFS_LETTER 'S'      /*Set an upper cased letter on which the drive will accessible (e.g. 'A')*/
     #define LV_FS_FATFS_CACHE_SIZE 0    /*>0 to cache this number of bytes in lv_fs_read()*/

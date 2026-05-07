@@ -25,17 +25,11 @@
 
 #include "ff.h"
 #include "ff_gen_drv.h"
-#include "user_diskio.h" /* defines USER_Driver as external */
 #include "userh_diskio.h"
 
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
-
-extern uint8_t retUSER; /* Return value for USER */
-extern char USERPath[4]; /* USER logical drive path */
-extern FATFS USERFatFS; /* File system object for USER logical drive */
-extern FIL USERFile; /* File object for USER */
 
 extern uint8_t retUSERH;    /* Return value for USERH */
 extern char USERHPath[4];   //给host的

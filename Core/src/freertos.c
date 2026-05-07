@@ -141,7 +141,7 @@ void StartDefaultTask(void *argument)
   for(;;)
   {
     mount_usb_host();
-    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+    //HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
     osDelay(1000);
   }
   /* USER CODE END StartDefaultTask */

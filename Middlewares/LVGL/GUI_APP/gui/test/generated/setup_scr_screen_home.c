@@ -32,7 +32,7 @@ void setup_scr_screen_home(lv_ui *ui)
     ui->screen_home_img_1 = lv_img_create(ui->screen_home);
     lv_obj_add_flag(ui->screen_home_img_1, LV_OBJ_FLAG_CLICKABLE);
 #if LV_USE_GUIDER_SIMULATOR
-    lv_img_set_src(ui->screen_home_img_1, "C:\\C\\STM32\\Middlewares\\LVGL\\GUI_APP\\gui\\test\\import\\image\\xiangtai.png");
+    lv_img_set_src(ui->screen_home_img_1, "C:\\C\\H743\\04_Software\\01_Source_Code\\Middlewares\\LVGL\\GUI_APP\\gui\\test\\import\\image\\xiangtai.png");
 #else
     lv_img_set_src(ui->screen_home_img_1, "F:/xiangtai.bin");
 #endif
@@ -75,6 +75,35 @@ void setup_scr_screen_home(lv_ui *ui)
     lv_obj_set_style_text_font(ui->screen_home_btn_1, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_home_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->screen_home_btn_1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes screen_home_btn_2
+    ui->screen_home_btn_2 = lv_btn_create(ui->screen_home);
+    lv_obj_add_flag(ui->screen_home_btn_2, LV_OBJ_FLAG_CHECKABLE);
+    ui->screen_home_btn_2_label = lv_label_create(ui->screen_home_btn_2);
+    lv_label_set_text(ui->screen_home_btn_2_label, "LED");
+    lv_label_set_long_mode(ui->screen_home_btn_2_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->screen_home_btn_2_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->screen_home_btn_2, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->screen_home_btn_2_label, LV_PCT(100));
+    lv_obj_set_pos(ui->screen_home_btn_2, 22, 354);
+    lv_obj_set_size(ui->screen_home_btn_2, 100, 50);
+
+    //Write style for screen_home_btn_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->screen_home_btn_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->screen_home_btn_2, lv_color_hex(0x2FDA64), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->screen_home_btn_2, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->screen_home_btn_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->screen_home_btn_2, 25, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->screen_home_btn_2, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_color(ui->screen_home_btn_2, lv_color_hex(0x0d4b3b), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_opa(ui->screen_home_btn_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_spread(ui->screen_home_btn_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_ofs_x(ui->screen_home_btn_2, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_ofs_y(ui->screen_home_btn_2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->screen_home_btn_2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_home_btn_2, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->screen_home_btn_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->screen_home_btn_2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //The custom code of screen_home.
 

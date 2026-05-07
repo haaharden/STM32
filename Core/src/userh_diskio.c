@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
  ******************************************************************************
-  * @file    user_diskio.c
+  * @file    userh_diskio.c
   * @brief   This file includes a diskio driver skeleton to be completed by the user.
   ******************************************************************************
   * @attention

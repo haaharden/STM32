@@ -3,7 +3,6 @@
 
 typedef enum {
   USB_MODE_IDLE = 0,
-  USB_MODE_DEVICE,
   USB_MODE_HOST
 } usb_mode_t;
 

@@ -23,6 +23,8 @@ typedef struct
 	lv_obj_t *screen_home_img_1;
 	lv_obj_t *screen_home_btn_1;
 	lv_obj_t *screen_home_btn_1_label;
+	lv_obj_t *screen_home_btn_2;
+	lv_obj_t *screen_home_btn_2_label;
 	lv_obj_t *screen_1;
 	bool screen_1_del;
 	lv_obj_t *screen_1_img_2;
