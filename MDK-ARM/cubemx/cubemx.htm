@@ -3,7 +3,7 @@
 <title>Static Call Graph - [cubemx\cubemx.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image cubemx\cubemx.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Tue May  5 15:13:52 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Thu May  7 08:38:22 2026
 <BR><P>
 <H3>Maximum Stack Usage =        928 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1608,7 +1608,7 @@ Global Symbols
 
 <P><STRONG><a name="[4de]"></a>__rt_errno_addr$intlibspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
 
-<P><STRONG><a name="[172]"></a>BSP_SDRAM_Init</STRONG> (Thumb, 218 bytes, Stack size 24 bytes, bsp_sdram.o(.text.BSP_SDRAM_Init))
+<P><STRONG><a name="[172]"></a>BSP_SDRAM_Init</STRONG> (Thumb, 218 bytes, Stack size 24 bytes, sdram_w9825g6.o(.text.BSP_SDRAM_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = BSP_SDRAM_Init &rArr; HAL_SDRAM_SendCommand &rArr; FMC_SDRAM_SendCommand
 </UL>
 <BR>[Calls]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
@@ -1757,7 +1757,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USER_write
 </UL>
 
-<P><STRONG><a name="[189]"></a>GTP_Execu</STRONG> (Thumb, 192 bytes, Stack size 48 bytes, touch.o(.text.GTP_Execu))
+<P><STRONG><a name="[189]"></a>GTP_Execu</STRONG> (Thumb, 192 bytes, Stack size 48 bytes, touch_gt1151q.o(.text.GTP_Execu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 416 + Unknown Stack Size
 <LI>Call Chain = GTP_Execu &rArr; GTP_I2C_Read &rArr; Touch_I2cTransfer &rArr; HAL_I2C_Init &rArr; HAL_I2C_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -1767,7 +1767,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[26b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Touch_ReadPoint
 </UL>
 
-<P><STRONG><a name="[18c]"></a>GTP_Init_Panel</STRONG> (Thumb, 176 bytes, Stack size 40 bytes, touch.o(.text.GTP_Init_Panel))
+<P><STRONG><a name="[18c]"></a>GTP_Init_Panel</STRONG> (Thumb, 176 bytes, Stack size 40 bytes, touch_gt1151q.o(.text.GTP_Init_Panel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 416 + Unknown Stack Size
 <LI>Call Chain = GTP_Init_Panel &rArr; I2C_Touch_Init &rArr; HAL_I2C_Init &rArr; HAL_I2C_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -1842,7 +1842,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspDeInit
 </UL>
 
-<P><STRONG><a name="[19a]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, touch.o(.text.HAL_GPIO_EXTI_Callback))
+<P><STRONG><a name="[19a]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, touch_gt1151q.o(.text.HAL_GPIO_EXTI_Callback))
 <BR><BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
 </UL>
 
@@ -2804,7 +2804,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
-<P><STRONG><a name="[23f]"></a>I2C_ResetChip</STRONG> (Thumb, 732 bytes, Stack size 32 bytes, touch.o(.text.I2C_ResetChip))
+<P><STRONG><a name="[23f]"></a>I2C_ResetChip</STRONG> (Thumb, 732 bytes, Stack size 32 bytes, touch_gt1151q.o(.text.I2C_ResetChip))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = I2C_ResetChip &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
@@ -2815,7 +2815,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Touch_Init
 </UL>
 
-<P><STRONG><a name="[18d]"></a>I2C_Touch_Init</STRONG> (Thumb, 280 bytes, Stack size 72 bytes, touch.o(.text.I2C_Touch_Init))
+<P><STRONG><a name="[18d]"></a>I2C_Touch_Init</STRONG> (Thumb, 280 bytes, Stack size 72 bytes, touch_gt1151q.o(.text.I2C_Touch_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 376 + Unknown Stack Size
 <LI>Call Chain = I2C_Touch_Init &rArr; HAL_I2C_Init &rArr; HAL_I2C_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -2840,7 +2840,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.text.MX_FREERTOS_Init)
 </UL>
-<P><STRONG><a name="[247]"></a>LCD_SetActiveBufferAddress</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, display.o(.text.LCD_SetActiveBufferAddress))
+<P><STRONG><a name="[247]"></a>LCD_SetActiveBufferAddress</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, disp_ht05.o(.text.LCD_SetActiveBufferAddress))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = LCD_SetActiveBufferAddress &rArr; HAL_LTDC_SetAddress &rArr; LTDC_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_SetAddress
@@ -3091,11 +3091,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 </UL>
 
-<P><STRONG><a name="[488]"></a>Touch_ClearEventPending</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, touch.o(.text.Touch_ClearEventPending))
+<P><STRONG><a name="[488]"></a>Touch_ClearEventPending</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, touch_gt1151q.o(.text.Touch_ClearEventPending))
 <BR><BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchpad_read
 </UL>
 
-<P><STRONG><a name="[26a]"></a>Touch_Init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, touch.o(.text.Touch_Init))
+<P><STRONG><a name="[26a]"></a>Touch_Init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, touch_gt1151q.o(.text.Touch_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 424 + Unknown Stack Size
 <LI>Call Chain = Touch_Init &rArr; GTP_Init_Panel &rArr; I2C_Touch_Init &rArr; HAL_I2C_Init &rArr; HAL_I2C_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -3104,7 +3104,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[383]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_port_indev_init
 </UL>
 
-<P><STRONG><a name="[26b]"></a>Touch_ReadPoint</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, touch.o(.text.Touch_ReadPoint))
+<P><STRONG><a name="[26b]"></a>Touch_ReadPoint</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, touch_gt1151q.o(.text.Touch_ReadPoint))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440 + Unknown Stack Size
 <LI>Call Chain = Touch_ReadPoint &rArr; GTP_Execu &rArr; GTP_I2C_Read &rArr; Touch_I2cTransfer &rArr; HAL_I2C_Init &rArr; HAL_I2C_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -4187,7 +4187,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> user_diskio.o(.data.USER_Driver)
 </UL>
-<P><STRONG><a name="[187]"></a>W25Q256_EraseSector</STRONG> (Thumb, 278 bytes, Stack size 152 bytes, w25q256.o(.text.W25Q256_EraseSector))
+<P><STRONG><a name="[187]"></a>W25Q256_EraseSector</STRONG> (Thumb, 278 bytes, Stack size 152 bytes, flash_w25q256.o(.text.W25Q256_EraseSector))
 <BR><BR>[Stack]<UL><LI>Max Depth = 524 + Unknown Stack Size
 <LI>Call Chain = W25Q256_EraseSector &rArr; W25Q256_Init &rArr; W25Q256_WriteEnable &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
@@ -4201,7 +4201,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPlatform_Write
 </UL>
 
-<P><STRONG><a name="[181]"></a>W25Q256_GetStatus</STRONG> (Thumb, 120 bytes, Stack size 72 bytes, w25q256.o(.text.W25Q256_GetStatus))
+<P><STRONG><a name="[181]"></a>W25Q256_GetStatus</STRONG> (Thumb, 120 bytes, Stack size 72 bytes, flash_w25q256.o(.text.W25Q256_GetStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = W25Q256_GetStatus &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_QSPI_Receive
@@ -4211,7 +4211,7 @@ Global Symbols
 <LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPlatform_Status
 </UL>
 
-<P><STRONG><a name="[17f]"></a>W25Q256_Init</STRONG> (Thumb, 1024 bytes, Stack size 160 bytes, w25q256.o(.text.W25Q256_Init))
+<P><STRONG><a name="[17f]"></a>W25Q256_Init</STRONG> (Thumb, 1024 bytes, Stack size 160 bytes, flash_w25q256.o(.text.W25Q256_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 372 + Unknown Stack Size
 <LI>Call Chain = W25Q256_Init &rArr; W25Q256_WriteEnable &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
@@ -4235,7 +4235,7 @@ Global Symbols
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q256_Read
 </UL>
 
-<P><STRONG><a name="[183]"></a>W25Q256_Read</STRONG> (Thumb, 156 bytes, Stack size 72 bytes, w25q256.o(.text.W25Q256_Read))
+<P><STRONG><a name="[183]"></a>W25Q256_Read</STRONG> (Thumb, 156 bytes, Stack size 72 bytes, flash_w25q256.o(.text.W25Q256_Read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 444 + Unknown Stack Size
 <LI>Call Chain = W25Q256_Read &rArr; W25Q256_Init &rArr; W25Q256_WriteEnable &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
@@ -4247,7 +4247,7 @@ Global Symbols
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPlatform_Read
 </UL>
 
-<P><STRONG><a name="[2c0]"></a>W25Q256_WaitWhileBusy</STRONG> (Thumb, 152 bytes, Stack size 96 bytes, w25q256.o(.text.W25Q256_WaitWhileBusy))
+<P><STRONG><a name="[2c0]"></a>W25Q256_WaitWhileBusy</STRONG> (Thumb, 152 bytes, Stack size 96 bytes, flash_w25q256.o(.text.W25Q256_WaitWhileBusy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = W25Q256_WaitWhileBusy &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -4257,7 +4257,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q256_WritePage
 </UL>
 
-<P><STRONG><a name="[188]"></a>W25Q256_Write</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, w25q256.o(.text.W25Q256_Write))
+<P><STRONG><a name="[188]"></a>W25Q256_Write</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, flash_w25q256.o(.text.W25Q256_Write))
 <BR><BR>[Stack]<UL><LI>Max Depth = 468 + Unknown Stack Size
 <LI>Call Chain = W25Q256_Write &rArr; W25Q256_WritePage &rArr; W25Q256_Init &rArr; W25Q256_WriteEnable &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
@@ -4266,7 +4266,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPlatform_Write
 </UL>
 
-<P><STRONG><a name="[2c1]"></a>W25Q256_WritePage</STRONG> (Thumb, 188 bytes, Stack size 72 bytes, w25q256.o(.text.W25Q256_WritePage))
+<P><STRONG><a name="[2c1]"></a>W25Q256_WritePage</STRONG> (Thumb, 188 bytes, Stack size 72 bytes, flash_w25q256.o(.text.W25Q256_WritePage))
 <BR><BR>[Stack]<UL><LI>Max Depth = 444 + Unknown Stack Size
 <LI>Call Chain = W25Q256_WritePage &rArr; W25Q256_Init &rArr; W25Q256_WriteEnable &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
@@ -5194,7 +5194,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initial_Task
 </UL>
 
-<P><STRONG><a name="[38a]"></a>lcd_init</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, display.o(.text.lcd_init))
+<P><STRONG><a name="[38a]"></a>lcd_init</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, disp_ht05.o(.text.lcd_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 244 + Unknown Stack Size
 <LI>Call Chain = lcd_init &rArr; MX_LTDC_Init &rArr; HAL_LTDC_Init &rArr; HAL_LTDC_MspInit &rArr; HAL_GPIO_Init
 </UL>
@@ -9789,7 +9789,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_QSPI_Command
 </UL>
 
-<P><STRONG><a name="[2bd]"></a>W25Q256_WriteEnable</STRONG> (Thumb, 210 bytes, Stack size 152 bytes, w25q256.o(.text.W25Q256_WriteEnable))
+<P><STRONG><a name="[2bd]"></a>W25Q256_WriteEnable</STRONG> (Thumb, 210 bytes, Stack size 152 bytes, flash_w25q256.o(.text.W25Q256_WriteEnable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 212 + Unknown Stack Size
 <LI>Call Chain = W25Q256_WriteEnable &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
@@ -9803,7 +9803,7 @@ Local Symbols
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q256_Init
 </UL>
 
-<P><STRONG><a name="[2be]"></a>W25Q256_ReadStatusRegister1</STRONG> (Thumb, 116 bytes, Stack size 72 bytes, w25q256.o(.text.W25Q256_ReadStatusRegister1))
+<P><STRONG><a name="[2be]"></a>W25Q256_ReadStatusRegister1</STRONG> (Thumb, 116 bytes, Stack size 72 bytes, flash_w25q256.o(.text.W25Q256_ReadStatusRegister1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = W25Q256_ReadStatusRegister1 &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_QSPI_Receive
@@ -9812,7 +9812,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q256_Init
 </UL>
 
-<P><STRONG><a name="[2bf]"></a>W25Q256_ReadStatusRegister2</STRONG> (Thumb, 116 bytes, Stack size 72 bytes, w25q256.o(.text.W25Q256_ReadStatusRegister2))
+<P><STRONG><a name="[2bf]"></a>W25Q256_ReadStatusRegister2</STRONG> (Thumb, 116 bytes, Stack size 72 bytes, flash_w25q256.o(.text.W25Q256_ReadStatusRegister2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = W25Q256_ReadStatusRegister2 &rArr; HAL_QSPI_Command &rArr; QSPI_Config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_QSPI_Receive
@@ -9821,7 +9821,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q256_Init
 </UL>
 
-<P><STRONG><a name="[18a]"></a>GTP_I2C_Read</STRONG> (Thumb, 112 bytes, Stack size 32 bytes, touch.o(.text.GTP_I2C_Read))
+<P><STRONG><a name="[18a]"></a>GTP_I2C_Read</STRONG> (Thumb, 112 bytes, Stack size 32 bytes, touch_gt1151q.o(.text.GTP_I2C_Read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 368 + Unknown Stack Size
 <LI>Call Chain = GTP_I2C_Read &rArr; Touch_I2cTransfer &rArr; HAL_I2C_Init &rArr; HAL_I2C_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -9831,7 +9831,7 @@ Local Symbols
 <LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GTP_Init_Panel
 </UL>
 
-<P><STRONG><a name="[18b]"></a>Touch_I2cTransfer</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, touch.o(.text.Touch_I2cTransfer))
+<P><STRONG><a name="[18b]"></a>Touch_I2cTransfer</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, touch_gt1151q.o(.text.Touch_I2cTransfer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 336 + Unknown Stack Size
 <LI>Call Chain = Touch_I2cTransfer &rArr; HAL_I2C_Init &rArr; HAL_I2C_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -9845,7 +9845,7 @@ Local Symbols
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GTP_I2C_Read
 </UL>
 
-<P><STRONG><a name="[241]"></a>Touch_BusRecovery</STRONG> (Thumb, 2138 bytes, Stack size 40 bytes, touch.o(.text.Touch_BusRecovery))
+<P><STRONG><a name="[241]"></a>Touch_BusRecovery</STRONG> (Thumb, 2138 bytes, Stack size 40 bytes, touch_gt1151q.o(.text.Touch_BusRecovery))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = Touch_BusRecovery &rArr; HAL_I2C_DeInit &rArr; HAL_I2C_MspDeInit &rArr; HAL_GPIO_DeInit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init

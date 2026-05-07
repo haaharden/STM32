@@ -10,7 +10,7 @@
  *      INCLUDES
  *********************/
 #include "lv_port_indev.h"
-#include "touch.h"
+#include "touch_gt1151q.h"
 
 /*********************
  *      DEFINES

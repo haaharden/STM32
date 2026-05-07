@@ -10,7 +10,7 @@
  *      INCLUDES
  *********************/
 #include "lv_port_disp.h"
-#include "display.h"
+#include "disp_ht05.h"
 #include <stdbool.h>
 
 #if LV_COLOR_DEPTH != 16
