@@ -253,10 +253,15 @@
 "cubemx\setup_scr_screen_1.o"
 "cubemx\widgets_init.o"
 "cubemx\lv_font_montserratmedium_18.o"
+"cubemx\setup_scr_screen_2.o"
+"cubemx\lv_font_montserratmedium_16.o"
 "cubemx\initial.o"
 "cubemx\disp_ht05.o"
 "cubemx\segger_rtt.o"
 "cubemx\segger_rtt_printf.o"
+"cubemx\display.o"
+"cubemx\usb_storage.o"
+"cubemx\usb_file_browser.o"
 --strict --scatter "cubemx\cubemx.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

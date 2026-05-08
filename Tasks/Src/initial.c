@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "freertos.h"
 #include "fatfs.h"
 #include "usb_host.h"
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
 #include "lv_port_flash_fs.h"
 #include "lvgl.h"
+#include "cmsis_os2.h"
 
 #include "initial.h"
 #include "sdram_w9825g6.h"
 #include "flash_w25q256.h"
 #include "log.h"
 
-#define debug 0
-
-void initial(void)
+static void Initial(void)
 {
     /*
   lv_fs_file_t file;
@@ -47,6 +45,15 @@ void initial(void)
   }*/
   //osDelay(1); // 在这里打断点，直接观察本函数里的局部变量即可。
 }
+
+extern osSemaphoreId_t LvglReadySemHandle;
+void Initial_Task(void *argument)
+{
+  Initial();
+  osSemaphoreRelease(LvglReadySemHandle);
+  osThreadExit();
+}
+
 /*
 void test_host(void)
 {
@@ -135,7 +142,7 @@ void test_list_usb_root_debug(void)
 
     f_closedir(&dir);
 }*/
-void mount_usb_host(void)
+/*void mount_usb_host(void)
 {
   static uint8_t userh_mounted = 0;
 	static volatile FRESULT fr;
@@ -153,4 +160,4 @@ void mount_usb_host(void)
       f_mount(NULL, USERHPath, 0);
       userh_mounted = 0;
   }
-}
+}*/

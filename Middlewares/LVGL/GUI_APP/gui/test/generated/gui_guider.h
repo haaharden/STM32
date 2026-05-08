@@ -31,6 +31,11 @@ typedef struct
 	lv_obj_t *screen_1_btn_1;
 	lv_obj_t *screen_1_btn_1_label;
 	lv_obj_t *screen_1_img_1;
+	lv_obj_t *screen_2;
+	bool screen_2_del;
+	lv_obj_t *screen_2_label_path;
+	lv_obj_t *screen_2_cont_files;
+	lv_obj_t *screen_2_label_page;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -56,8 +61,10 @@ extern lv_ui guider_ui;
 
 void setup_scr_screen_home(lv_ui *ui);
 void setup_scr_screen_1(lv_ui *ui);
+void setup_scr_screen_2(lv_ui *ui);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_18)
+LV_FONT_DECLARE(lv_font_montserratMedium_16)
 
 
 #ifdef __cplusplus

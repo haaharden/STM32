@@ -8,7 +8,6 @@ typedef enum {
 
 extern usb_mode_t usb_mode;
 
-void initial(void);
-void mount_usb_host(void);
+void Initial_Task(void *argument);
 
 #endif 

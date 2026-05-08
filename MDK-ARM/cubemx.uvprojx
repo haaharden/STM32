@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_PWR_LDO_SUPPLY,USE_HAL_DRIVER,STM32H743xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/inc;../Platform/inc;../Tasks/Inc;../SYSTEM;../BSP/disp_ht05;../BSP/touch_gt1151q;../BSP/flash_w25q256;../BSP/sdram;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Drivers/CMSIS/RTOS2/Include;../OS/FreeRTOS/Source/include;../OS/FreeRTOS/Source/CMSIS_RTOS_V2;../OS/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../OS/FreeRTOS/Source/portable/Common;../Middlewares/FatFs/src;../Middlewares/STM32_USB_Host_Library/Class/MSC/Inc;../Middlewares/STM32_USB_Host_Library/Core/Inc;../Middlewares/LVGL/GUI;../Middlewares/LVGL/GUI/src;../Middlewares/LVGL/GUI/porting;../Middlewares/LVGL/GUI_APP/gui/test/custom;../Middlewares/LVGL/GUI_APP/gui/test/generated;../Middlewares/RTT</IncludePath>
+              <IncludePath>../Core/inc;../Platform/inc;../Tasks/Inc;../SYSTEM;../BSP/disp_ht05;../BSP/touch_gt1151q;../BSP/flash_w25q256;../BSP/sdram;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Drivers/CMSIS/RTOS2/Include;../OS/FreeRTOS/Source/include;../OS/FreeRTOS/Source/CMSIS_RTOS_V2;../OS/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../OS/FreeRTOS/Source/portable/Common;../Middlewares/FatFs/src;../Middlewares/STM32_USB_Host_Library/Class/MSC/Inc;../Middlewares/STM32_USB_Host_Library/Core/Inc;../Middlewares/LVGL/GUI;../Middlewares/LVGL/GUI/src;../Middlewares/LVGL/GUI/porting;../Middlewares/LVGL/GUI_APP/gui/test/custom;../Middlewares/LVGL/GUI_APP/gui/test/generated;../Middlewares/RTT;..\Tasks\disp;..\Tasks\usb</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2770,6 +2770,16 @@
               <FileType>1</FileType>
               <FilePath>..\Middlewares\LVGL\GUI_APP\gui\test\generated\guider_fonts\lv_font_montserratMedium_18.c</FilePath>
             </File>
+            <File>
+              <FileName>setup_scr_screen_2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\LVGL\GUI_APP\gui\test\generated\setup_scr_screen_2.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_font_montserratMedium_16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\LVGL\GUI_APP\gui\test\generated\guider_fonts\lv_font_montserratMedium_16.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2799,6 +2809,31 @@
               <FileName>SEGGER_RTT_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Middlewares\RTT\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>APP</GroupName>
+          <Files>
+            <File>
+              <FileName>display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Tasks\disp\display.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Tasks\usb\usb_storage.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_file_browser.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Tasks\usb\usb_file_browser.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Tasks\usb\usb_conf.h</FilePath>
             </File>
           </Files>
         </Group>
