@@ -63,7 +63,7 @@ void setup_scr_screen_home(lv_ui *ui);
 void setup_scr_screen_1(lv_ui *ui);
 void setup_scr_screen_2(lv_ui *ui);
 
-LV_FONT_DECLARE(lv_font_montserratMedium_18)
+LV_FONT_DECLARE(lv_font_AlimamaDongFangDaKai_Regular_18)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
 
 

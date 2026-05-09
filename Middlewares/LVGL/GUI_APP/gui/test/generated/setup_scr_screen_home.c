@@ -51,12 +51,12 @@ void setup_scr_screen_home(lv_ui *ui)
     ui->screen_home_btn_1 = lv_btn_create(ui->screen_home);
     lv_obj_add_flag(ui->screen_home_btn_1, LV_OBJ_FLAG_CHECKABLE);
     ui->screen_home_btn_1_label = lv_label_create(ui->screen_home_btn_1);
-    lv_label_set_text(ui->screen_home_btn_1_label, "Button");
+    lv_label_set_text(ui->screen_home_btn_1_label, "切换屏幕");
     lv_label_set_long_mode(ui->screen_home_btn_1_label, LV_LABEL_LONG_WRAP);
     lv_obj_align(ui->screen_home_btn_1_label, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_style_pad_all(ui->screen_home_btn_1, 0, LV_STATE_DEFAULT);
     lv_obj_set_width(ui->screen_home_btn_1_label, LV_PCT(100));
-    lv_obj_set_pos(ui->screen_home_btn_1, 34, 27);
+    lv_obj_set_pos(ui->screen_home_btn_1, 30, 30);
     lv_obj_set_size(ui->screen_home_btn_1, 100, 60);
 
     //Write style for screen_home_btn_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -72,7 +72,7 @@ void setup_scr_screen_home(lv_ui *ui)
     lv_obj_set_style_shadow_ofs_x(ui->screen_home_btn_1, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_ofs_y(ui->screen_home_btn_1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_home_btn_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_home_btn_1, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_home_btn_1, &lv_font_AlimamaDongFangDaKai_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_home_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->screen_home_btn_1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
@@ -80,7 +80,7 @@ void setup_scr_screen_home(lv_ui *ui)
     ui->screen_home_btn_2 = lv_btn_create(ui->screen_home);
     lv_obj_add_flag(ui->screen_home_btn_2, LV_OBJ_FLAG_CHECKABLE);
     ui->screen_home_btn_2_label = lv_label_create(ui->screen_home_btn_2);
-    lv_label_set_text(ui->screen_home_btn_2_label, "LED");
+    lv_label_set_text(ui->screen_home_btn_2_label, "灯的开关");
     lv_label_set_long_mode(ui->screen_home_btn_2_label, LV_LABEL_LONG_WRAP);
     lv_obj_align(ui->screen_home_btn_2_label, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_style_pad_all(ui->screen_home_btn_2, 0, LV_STATE_DEFAULT);
@@ -101,7 +101,7 @@ void setup_scr_screen_home(lv_ui *ui)
     lv_obj_set_style_shadow_ofs_x(ui->screen_home_btn_2, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_ofs_y(ui->screen_home_btn_2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_home_btn_2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_home_btn_2, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_home_btn_2, &lv_font_AlimamaDongFangDaKai_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_home_btn_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->screen_home_btn_2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [cubemx\cubemx.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image cubemx\cubemx.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Fri May  8 14:46:12 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Sat May  9 11:11:17 2026
 <BR><P>
 <H3>Maximum Stack Usage =        928 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -271,13 +271,13 @@ Function Pointers
  <LI><a href="#[bb]">lv_draw_sw_rect</a> from lv_draw_sw_rect.o(.text.lv_draw_sw_rect) referenced 2 times from lv_draw_sw.o(.text.lv_draw_sw_init_ctx)
  <LI><a href="#[c1]">lv_draw_sw_transform</a> from lv_draw_sw_transform.o(.text.lv_draw_sw_transform) referenced 2 times from lv_draw_sw.o(.text.lv_draw_sw_init_ctx)
  <LI><a href="#[c3]">lv_draw_sw_wait_for_finish</a> from lv_draw_sw.o(.text.lv_draw_sw_wait_for_finish) referenced 2 times from lv_draw_sw.o(.text.lv_draw_sw_init_ctx)
+ <LI><a href="#[f0]">lv_font_get_bitmap_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_bitmap_fmt_txt) referenced from lv_font_alimamadongfangdakai_regular_18.o(.rodata.lv_font_AlimamaDongFangDaKai_Regular_18)
  <LI><a href="#[f0]">lv_font_get_bitmap_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_bitmap_fmt_txt) referenced from lv_font_montserratmedium_16.o(.rodata.lv_font_montserratMedium_16)
- <LI><a href="#[f0]">lv_font_get_bitmap_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_bitmap_fmt_txt) referenced from lv_font_montserratmedium_18.o(.rodata.lv_font_montserratMedium_18)
  <LI><a href="#[f0]">lv_font_get_bitmap_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_bitmap_fmt_txt) referenced from lv_font_montserrat_14.o(.rodata.lv_font_montserrat_14)
  <LI><a href="#[f0]">lv_font_get_bitmap_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_bitmap_fmt_txt) referenced from lv_font_montserrat_16.o(.rodata.lv_font_montserrat_16)
  <LI><a href="#[f0]">lv_font_get_bitmap_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_bitmap_fmt_txt) referenced from lv_font_montserrat_32.o(.rodata.lv_font_montserrat_32)
+ <LI><a href="#[ef]">lv_font_get_glyph_dsc_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_glyph_dsc_fmt_txt) referenced from lv_font_alimamadongfangdakai_regular_18.o(.rodata.lv_font_AlimamaDongFangDaKai_Regular_18)
  <LI><a href="#[ef]">lv_font_get_glyph_dsc_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_glyph_dsc_fmt_txt) referenced from lv_font_montserratmedium_16.o(.rodata.lv_font_montserratMedium_16)
- <LI><a href="#[ef]">lv_font_get_glyph_dsc_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_glyph_dsc_fmt_txt) referenced from lv_font_montserratmedium_18.o(.rodata.lv_font_montserratMedium_18)
  <LI><a href="#[ef]">lv_font_get_glyph_dsc_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_glyph_dsc_fmt_txt) referenced from lv_font_montserrat_14.o(.rodata.lv_font_montserrat_14)
  <LI><a href="#[ef]">lv_font_get_glyph_dsc_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_glyph_dsc_fmt_txt) referenced from lv_font_montserrat_16.o(.rodata.lv_font_montserrat_16)
  <LI><a href="#[ef]">lv_font_get_glyph_dsc_fmt_txt</a> from lv_font_fmt_txt.o(.text.lv_font_get_glyph_dsc_fmt_txt) referenced from lv_font_montserrat_32.o(.rodata.lv_font_montserrat_32)
@@ -5313,7 +5313,7 @@ Global Symbols
 <BR>[Address Reference Count : 5]<UL><LI> lv_font_montserrat_16.o(.rodata.lv_font_montserrat_16)
 <LI> lv_font_montserrat_32.o(.rodata.lv_font_montserrat_32)
 <LI> lv_font_montserrat_14.o(.rodata.lv_font_montserrat_14)
-<LI> lv_font_montserratmedium_18.o(.rodata.lv_font_montserratMedium_18)
+<LI> lv_font_alimamadongfangdakai_regular_18.o(.rodata.lv_font_AlimamaDongFangDaKai_Regular_18)
 <LI> lv_font_montserratmedium_16.o(.rodata.lv_font_montserratMedium_16)
 </UL>
 <P><STRONG><a name="[359]"></a>lv_font_get_glyph_bitmap</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_font.o(.text.lv_font_get_glyph_bitmap))
@@ -5335,7 +5335,7 @@ Global Symbols
 <BR>[Address Reference Count : 5]<UL><LI> lv_font_montserrat_16.o(.rodata.lv_font_montserrat_16)
 <LI> lv_font_montserrat_32.o(.rodata.lv_font_montserrat_32)
 <LI> lv_font_montserrat_14.o(.rodata.lv_font_montserrat_14)
-<LI> lv_font_montserratmedium_18.o(.rodata.lv_font_montserratMedium_18)
+<LI> lv_font_alimamadongfangdakai_regular_18.o(.rodata.lv_font_AlimamaDongFangDaKai_Regular_18)
 <LI> lv_font_montserratmedium_16.o(.rodata.lv_font_montserratMedium_16)
 </UL>
 <P><STRONG><a name="[2d0]"></a>lv_font_get_glyph_width</STRONG> (Thumb, 162 bytes, Stack size 48 bytes, lv_font.o(.text.lv_font_get_glyph_width))
@@ -8319,7 +8319,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 </UL>
 
-<P><STRONG><a name="[e7]"></a>setup_scr_screen_1</STRONG> (Thumb, 564 bytes, Stack size 16 bytes, setup_scr_screen_1.o(.text.setup_scr_screen_1))
+<P><STRONG><a name="[e7]"></a>setup_scr_screen_1</STRONG> (Thumb, 560 bytes, Stack size 16 bytes, setup_scr_screen_1.o(.text.setup_scr_screen_1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 488 + Unknown Stack Size
 <LI>Call Chain = setup_scr_screen_1 &rArr; lv_img_set_pivot &rArr; lv_obj_update_layout &rArr; layout_update_core &rArr;  layout_update_core (Cycle)
 </UL>
@@ -10712,10 +10712,10 @@ Local Symbols
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_SDRAM_Init
 <LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q256_Init
 <LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_init
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
 <LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_port_flash_fs_init
 <LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_port_indev_init
 <LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_port_disp_init
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initial_Task
 </UL>

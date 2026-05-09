@@ -306,7 +306,7 @@
 					"height": 50,
 					"default_style": false,
 					"long_mode": "LV_LABEL_LONG_WRAP",
-					"text": "LED",
+					"text": "灯的开关",
 					"toggle": true,
 					"style": [
 						{
@@ -338,7 +338,7 @@
 							"bg_img_recolor": "#ffffff",
 							"bg_img_recolor_opa": 0,
 							"font": 18,
-							"font_family": "montserratMedium",
+							"font_family": "AlimamaDongFangDaKai_Regular",
 							"text_color": "#ffffff",
 							"text_align": "LV_TEXT_ALIGN_CENTER"
 						},
@@ -497,8 +497,8 @@
 					"name": "btn_1",
 					"id": "9phem77x",
 					"type": "btn",
-					"left": 34,
-					"top": 27,
+					"left": 30,
+					"top": 30,
 					"visible": true,
 					"isLock": false,
 					"flag": [],
@@ -506,7 +506,7 @@
 					"height": 60,
 					"default_style": false,
 					"long_mode": "LV_LABEL_LONG_WRAP",
-					"text": "Button",
+					"text": "切换屏幕",
 					"toggle": true,
 					"style": [
 						{
@@ -538,7 +538,7 @@
 							"bg_img_recolor": "#ffffff",
 							"bg_img_recolor_opa": 0,
 							"font": 18,
-							"font_family": "montserratMedium",
+							"font_family": "AlimamaDongFangDaKai_Regular",
 							"text_color": "#ffffff",
 							"text_opa": 255,
 							"text_align": "LV_TEXT_ALIGN_CENTER"
@@ -810,8 +810,8 @@
 					"name": "btn_1",
 					"id": "z9bht7jk",
 					"type": "btn",
-					"left": 348,
-					"top": 407,
+					"left": 30,
+					"top": 30,
 					"visible": true,
 					"isLock": false,
 					"flag": [],
@@ -819,14 +819,14 @@
 					"height": 50,
 					"default_style": false,
 					"long_mode": "LV_LABEL_LONG_WRAP",
-					"text": "Button",
+					"text": "切换屏幕",
 					"toggle": false,
 					"style": [
 						{
 							"part": "LV_PART_MAIN",
 							"state": "LV_STATE_DEFAULT",
 							"disable": false,
-							"bg_color": "#009ea9",
+							"bg_color": "#ffffff",
 							"bg_grad_color": "#2195f6",
 							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
@@ -851,8 +851,8 @@
 							"bg_img_recolor": "#ffffff",
 							"bg_img_recolor_opa": 0,
 							"font": 18,
-							"font_family": "montserratMedium",
-							"text_color": "#ffffff",
+							"font_family": "AlimamaDongFangDaKai_Regular",
+							"text_color": "#000000",
 							"text_opa": 255,
 							"text_align": "LV_TEXT_ALIGN_CENTER"
 						},
@@ -1464,8 +1464,8 @@
 						"visible": true,
 						"flag": [],
 						"pos": [
-							34,
-							27
+							30,
+							30
 						],
 						"size": [
 							100,
@@ -1545,8 +1545,8 @@
 														"name": "btn_1",
 														"id": "z9bht7jk",
 														"type": "btn",
-														"left": 348,
-														"top": 407,
+														"left": 30,
+														"top": 30,
 														"visible": true,
 														"isLock": false,
 														"flag": [],
@@ -1554,14 +1554,14 @@
 														"height": 50,
 														"default_style": false,
 														"long_mode": "LV_LABEL_LONG_WRAP",
-														"text": "Button",
+														"text": "切换屏幕",
 														"toggle": false,
 														"style": [
 															{
 																"part": "LV_PART_MAIN",
 																"state": "LV_STATE_DEFAULT",
 																"disable": false,
-																"bg_color": "#009ea9",
+																"bg_color": "#ffffff",
 																"bg_grad_color": "#2195f6",
 																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
@@ -1586,8 +1586,8 @@
 																"bg_img_recolor": "#ffffff",
 																"bg_img_recolor_opa": 0,
 																"font": 18,
-																"font_family": "montserratMedium",
-																"text_color": "#ffffff",
+																"font_family": "AlimamaDongFangDaKai_Regular",
+																"text_color": "#000000",
 																"text_opa": 255,
 																"text_align": "LV_TEXT_ALIGN_CENTER"
 															},
@@ -1838,7 +1838,7 @@
 								"bg_img_recolor": "#ffffff",
 								"bg_img_recolor_opa": 0,
 								"font": 18,
-								"font_family": "montserratMedium",
+								"font_family": "AlimamaDongFangDaKai_Regular",
 								"text_color": "#ffffff",
 								"text_opa": 255,
 								"text_align": "LV_TEXT_ALIGN_CENTER"
@@ -1976,7 +1976,7 @@
 								"text_color": "#000000"
 							}
 						],
-						"text": "Button",
+						"text": "切换屏幕",
 						"long_mode": "LV_LABEL_LONG_WRAP",
 						"toggle": true
 					},
@@ -2047,7 +2047,7 @@
 								"bg_img_recolor": "#ffffff",
 								"bg_img_recolor_opa": 0,
 								"font": 18,
-								"font_family": "montserratMedium",
+								"font_family": "AlimamaDongFangDaKai_Regular",
 								"text_color": "#ffffff",
 								"text_align": "LV_TEXT_ALIGN_CENTER"
 							},
@@ -2180,7 +2180,7 @@
 								"text_color": "#000000"
 							}
 						],
-						"text": "LED",
+						"text": "灯的开关",
 						"long_mode": "LV_LABEL_LONG_WRAP",
 						"toggle": true
 					}
@@ -2270,8 +2270,8 @@
 						"visible": true,
 						"flag": [],
 						"pos": [
-							348,
-							407
+							30,
+							30
 						],
 						"size": [
 							100,
@@ -2328,7 +2328,7 @@
 														"height": 50,
 														"default_style": false,
 														"long_mode": "LV_LABEL_LONG_WRAP",
-														"text": "LED",
+														"text": "灯的开关",
 														"toggle": true,
 														"style": [
 															{
@@ -2360,7 +2360,7 @@
 																"bg_img_recolor": "#ffffff",
 																"bg_img_recolor_opa": 0,
 																"font": 18,
-																"font_family": "montserratMedium",
+																"font_family": "AlimamaDongFangDaKai_Regular",
 																"text_color": "#ffffff",
 																"text_align": "LV_TEXT_ALIGN_CENTER"
 															},
@@ -2519,8 +2519,8 @@
 														"name": "btn_1",
 														"id": "9phem77x",
 														"type": "btn",
-														"left": 34,
-														"top": 27,
+														"left": 30,
+														"top": 30,
 														"visible": true,
 														"isLock": false,
 														"flag": [],
@@ -2528,7 +2528,7 @@
 														"height": 60,
 														"default_style": false,
 														"long_mode": "LV_LABEL_LONG_WRAP",
-														"text": "Button",
+														"text": "切换屏幕",
 														"toggle": true,
 														"style": [
 															{
@@ -2560,7 +2560,7 @@
 																"bg_img_recolor": "#ffffff",
 																"bg_img_recolor_opa": 0,
 																"font": 18,
-																"font_family": "montserratMedium",
+																"font_family": "AlimamaDongFangDaKai_Regular",
 																"text_color": "#ffffff",
 																"text_opa": 255,
 																"text_align": "LV_TEXT_ALIGN_CENTER"
@@ -2789,7 +2789,7 @@
 								"part": "LV_PART_MAIN",
 								"state": "LV_STATE_DEFAULT",
 								"disable": false,
-								"bg_color": "#009ea9",
+								"bg_color": "#ffffff",
 								"bg_grad_color": "#2195f6",
 								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
@@ -2814,8 +2814,8 @@
 								"bg_img_recolor": "#ffffff",
 								"bg_img_recolor_opa": 0,
 								"font": 18,
-								"font_family": "montserratMedium",
-								"text_color": "#ffffff",
+								"font_family": "AlimamaDongFangDaKai_Regular",
+								"text_color": "#000000",
 								"text_opa": 255,
 								"text_align": "LV_TEXT_ALIGN_CENTER"
 							},
@@ -2952,7 +2952,7 @@
 								"text_color": "#000000"
 							}
 						],
-						"text": "Button",
+						"text": "切换屏幕",
 						"long_mode": "LV_LABEL_LONG_WRAP",
 						"toggle": false
 					},

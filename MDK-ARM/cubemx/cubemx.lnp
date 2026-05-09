@@ -255,6 +255,7 @@
 "cubemx\lv_font_montserratmedium_18.o"
 "cubemx\setup_scr_screen_2.o"
 "cubemx\lv_font_montserratmedium_16.o"
+"cubemx\lv_font_alimamadongfangdakai_regular_18.o"
 "cubemx\initial.o"
 "cubemx\disp_ht05.o"
 "cubemx\segger_rtt.o"
